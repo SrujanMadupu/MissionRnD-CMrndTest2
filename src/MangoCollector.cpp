@@ -69,6 +69,9 @@ struct node{
 };
 
 int mangocity_count_ways(struct node *startcity,int k, int *shortestpath,int *shortestpathlen){
-	//Just Copy values in shortestpath and shortestpathlen .Dont allocate memory for it .
-	return -1;
+	//Just Copy values in shortestpath and shortestpathlen .Dont allocate memory for it 
+	if (!startcity || k == 0){
+		return -1;
+	}
+	
 }

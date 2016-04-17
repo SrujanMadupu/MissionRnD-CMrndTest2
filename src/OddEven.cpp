@@ -30,7 +30,8 @@ The type if node is oddevennode ,and not Node .
 */
 #include <stdlib.h>
 #include <stdio.h>
-
+void print_sll(struct oddevennode *temp);
+int* oddeven_sll_util(struct oddevennode *q, int *count);
 struct oddevennode{
 	int data;
 	struct oddevennode * next;
@@ -38,7 +39,57 @@ struct oddevennode{
 
 };
 
+int* oddeven_sll_util(struct oddevennode *q,int *count){
+	struct oddevennode *odd, *temp, *even,*m,*n;
+	odd = even =m=n =NULL;
+	temp = q;
+	while (temp){
+		int x = (temp->data) % 2;
+		if (x==1){
+			count[0]++;
+			if (odd != NULL){
+				odd->random = temp;
+				odd = temp;
+			}
+			else{
+				odd = temp;
+				m = odd;
+			}
+		}
+		else{
+			count[1]++;
+			if (even != NULL){
+				even->random = temp;
+				even = temp;
+			}
+			else{
+				even = temp;
+				n = even;
+			}
+		}
+		temp = temp->next;
+	}
+	odd->random = NULL;
+	even->random = NULL;
+	//print_sll(m);
+	//("\n");
+	//print_sll(n);
+	return count;
+}
 int * oddeven_sll(struct oddevennode *head){
+	if (!head){
+		return NULL;
+	}
+	int *count = (int*)malloc(sizeof(int) * 2);
+	for (int i = 0; i < 2; i++){
+		count[i] = 0;
+	}
+	return oddeven_sll_util(head,count);
+}
 
-	return NULL;
+void print_sll(struct oddevennode *temp){
+	while (temp){
+		printf("%d ", temp->data);
+		temp = temp->random;
+	}
 }

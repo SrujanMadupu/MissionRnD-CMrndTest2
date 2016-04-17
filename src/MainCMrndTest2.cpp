@@ -40,7 +40,25 @@ struct node{
 	struct node *left;
 	struct node *right;
 };
+struct oddevennode * createNode(int num) {
+	struct oddevennode *newNode = (struct oddevennode *)malloc(sizeof(struct oddevennode));
+	newNode->data = num;
+	newNode->next = NULL;
+	newNode->random = NULL;
+	return newNode;
+}
 
+void addNode(struct oddevennode **head, int data){
+	struct oddevennode * cur = createNode(data);
+	if (*head == NULL){
+		*head = cur;
+	}
+	else{
+		struct oddevennode *temp = *head;
+		cur->next = temp;
+		*head = cur;
+	}
+}
 //Helper Functions Start
 
 
@@ -49,6 +67,14 @@ struct node{
 int main(){
 	
 	//Test Odd Even SLL
+	int arr[] = { 50, 4, 3, 7, 10, 99, 17 };
+	struct oddevennode *head = NULL;
+	for (int i = 0; i < 7; i++){
+		addNode(&head, arr[i]);
+	}
+	oddeven_sll(head);
+	getchar();
+	return 0;
 
 	//Test CommonRoute
 
@@ -56,3 +82,6 @@ int main(){
 	
 	//Test Pillars
 }
+
+
+

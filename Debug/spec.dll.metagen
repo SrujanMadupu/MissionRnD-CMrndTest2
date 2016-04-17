@@ -1,0 +1,64 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly spec, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class spec.CommonRouteSpec: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext 'get set' : 
+  Methods:
+    get_TestContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_TestContext(TestContext): PrivateScope, Public, HideBySig, SpecialName
+    testCommonRoute(SByte*, SByte*, Int32, Int32): PrivateScope, Public, HideBySig
+    Sample1_CommonRoute(): PrivateScope, Public, HideBySig
+    Sample2_CommonRoute(): PrivateScope, Public, HideBySig
+Class spec.MangoCollectorSpec: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext 'get set' : 
+  Methods:
+    get_TestContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_TestContext(TestContext): PrivateScope, Public, HideBySig, SpecialName
+    newNode(Int32): PrivateScope, Public, HideBySig
+    constructBinaryTree_spec(Int32*, Int32): PrivateScope, Public, HideBySig
+    compare_arrays_mc_spec(Int32*, Int32*, Int32): PrivateScope, Public, HideBySig
+    testMangoCollector(Int32, Int32*, Int32, Int32, Int32, Int32*, Int32): PrivateScope, Public, HideBySig
+    Sample1_MangoCollector(): PrivateScope, Public, HideBySig
+    Sample2_MangoCollector(): PrivateScope, Public, HideBySig
+    Sample3_MangoCollector(): PrivateScope, Public, HideBySig
+Class spec.OddEvenSpec: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext 'get set' : 
+  Methods:
+    get_TestContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_TestContext(TestContext): PrivateScope, Public, HideBySig, SpecialName
+    createNode(Int32): PrivateScope, Public, HideBySig
+    addNode(oddevennode**, Int32): PrivateScope, Public, HideBySig
+    is_correct(oddevennode*, Int32*, Int32): PrivateScope, Public, HideBySig
+    mrnd_sort(Int32*, Int32): PrivateScope, Public, HideBySig
+    compare_arrays(Int32*, Int32*, Int32): PrivateScope, Public, HideBySig
+    toArray(oddevennode*, Int32): PrivateScope, Public, HideBySig
+    Sample1_OddEvenSLL(): PrivateScope, Public, HideBySig
+    Sample2_OddEvenSLL(): PrivateScope, Public, HideBySig
+Class spec.PillarsSpec: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext 'get set' : 
+  Methods:
+    get_TestContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_TestContext(TestContext): PrivateScope, Public, HideBySig, SpecialName
+    compare_arrays_pillars_spec(Int32*, Int32*, Int32): PrivateScope, Public, HideBySig
+    testPillars_spec(Int32*, Int32, Int32, Int32*, Int32, Int32): PrivateScope, Public, HideBySig
+    Sample1_Pillars(): PrivateScope, Public, HideBySig
+    Sample2_Pillars(): PrivateScope, Public, HideBySig
+    Sample3_Pillars(): PrivateScope, Public, HideBySig

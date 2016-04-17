@@ -64,7 +64,56 @@ Note : There will be only One Maximum Jumps path .[If there are multiple ,Return
 */
 #include <stdlib.h>
 #include <stdio.h>
+int * jumps_util(int *blocks, int x, int y, int N, int M, int *jumps, int *path){
+	int x_next, y_next;
+	int m = 0;
+	int xMoves[] = { 0,0,1,-1};
+	int yMoves[] = {1,-1,0,0};
+	for (int i = 0; i < 4; i++){
+		x_next = x + xMoves[i];
+		y_next = y + yMoves[i];
+		if (isGreaterPillar(blocks, x_next, y_next, N, M)){
+			*jumps = *jumps + 1;
+			path[m++] = *((blocks + x_next*N) + y_next);
+			if (jumps_util(blocks, x_next, y_next, N, M, jumps, path)){
+
+			}
+		}
+	}
+}
+int isGreaterPillar(int *blocks, int i, int j, int N, int M){
+	if (*((blocks + i*N) + j + 1) > *((blocks + i*N) + j) || *((blocks + i*N) + j - 1) > *((blocks + i*N) + j + 1) || *((blocks + (i + 1)*N) + j) > *((blocks + i*N) + j) || *((blocks + (i - 1)*N) + j) > *((blocks + i*N) + j)){
+		return 0;
+	}
+	else{
+		return 1;
+	}
+}
+int isLooserPillar(int *blocks,int i,int j, int N, int M){
+	if (*((blocks + i*N) + j + 1) < *((blocks + i*N) + j) || *((blocks + i*N) + j - 1) < *((blocks + i*N) + j + 1) || *((blocks + (i + 1)*N) + j) < *((blocks + i*N) + j) || *((blocks + (i - 1)*N) + j) < *((blocks + i*N) + j)){
+		return 0;
+	}
+	else{
+		return 1;
+	}
+}
+int* pillars_max_jumps_util(int *blocks, int N, int M, int *jumps,int *path){
+	for (int i = 0; i < N; i++){
+		for (int j = 0; j < M; j++){
+			if (isLooserPillar(blocks,i,j, N, M) == 1){
+				return  jumps_util(blocks, i, j, N, M, jumps, path);
+			}
+		}
+	}
+
+
+}
 
 int * pillars_max_jumps(int *blocks, int n, int m,int *jumps_count){
-	return NULL;
+	if (blocks == NULL || n <= 0 || m <= 0){
+		return NULL;
+	}
+	int *max_path = (int*)malloc(sizeof(int)*n*m);
+
+	return pillars_max_jumps_util(blocks, n, m, jumps_count,max_path);
 }

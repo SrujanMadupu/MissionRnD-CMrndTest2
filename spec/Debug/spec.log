@@ -1,0 +1,27 @@
+﻿Build started 17/04/2016 14:26:43.
+     1>Project "C:\Users\Srujan Madupu\MissionRnDProjects\MrndMockTest2-Worksheet\spec\spec.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\spec.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib CommonRouteSpec.cpp MangoCollectorSpec.cpp
+         CommonRouteSpec.cpp
+     1>CommonRouteSpec.cpp(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>CommonRouteSpec.cpp(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         MangoCollectorSpec.cpp
+     1>MangoCollectorSpec.cpp(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>MangoCollectorSpec.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         Generating Code...
+     1>c:\users\srujan madupu\missionrndprojects\mrndmocktest2-worksheet\src\mangocollector.cpp(77): warning C4715: 'mangocity_count_ways' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Srujan Madupu\MissionRnDProjects\MrndMockTest2-Worksheet\Debug\spec.dll" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Srujan Madupu\MissionRnDProjects\MrndMockTest2-Worksheet\Debug\spec.pdb" /HEAP:"10000000","100000" /STACK:"10000000","100000" /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH /DLL Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\CommonRouteSpec.obj
+         Debug\MangoCollectorSpec.obj
+         Debug\OddEvenSpec.obj
+         Debug\PillarsSpec.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         spec.vcxproj -> C:\Users\Srujan Madupu\MissionRnDProjects\MrndMockTest2-Worksheet\Debug\spec.dll
+     1>Done Building Project "C:\Users\Srujan Madupu\MissionRnDProjects\MrndMockTest2-Worksheet\spec\spec.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.38
